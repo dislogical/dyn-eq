@@ -4,9 +4,8 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 use core::fmt::Debug;
-use dyn_eq::DynEq;
 
-trait MyTrait: DynEq + Debug {}
+trait MyTrait: dyn_eq::DynEq + Debug {}
 dyn_eq::eq_trait_object!(MyTrait);
 
 // This works
